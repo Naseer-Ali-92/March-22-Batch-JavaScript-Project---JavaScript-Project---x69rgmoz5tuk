@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <h1>BILL SPLITTER</h1>
+        </div>
+        <div class="App">
+            <div class="container">
+                <div class="left-app">
+                    <h4>Bill</h4>
+                    <input id="bill" type="number" placeholder="₹" required/>
+                    <h4>Select Tip %</h4>
+                    <div class="tip-perc">
+                        <button class="tip" onclick="handleClick(this)" id="5"  value="5">5 %</button>
+                        <button class="tip" onclick="handleClick(this)" id="10" value="10">10 %</button>
+                        <button class="tip" onclick="handleClick(this)" id="15" value="15">15 %</button>
+                        <button class="tip" onclick="handleClick(this)" id="25" value="25">25 %</button>
+                        <button class="tip" onclick="handleClick(this)" id="50" value="50">50 %</button>
+                        <button class="tip" 
+                        onclick="handleClick(this)"
+                        id="custom"
+                        value="custom"
+                        style="
+                        color: rgb(103, 97, 97); 
+                        background-color: white;
+                        border: 1px solid black;
+                        font-weight: normal;"
+                        >custom</button>
+                    </div>
+                    <h4>Number of people</h4>
+                    <input id="person" type="number" placeholder="Persons">
+                </div>
+                <div class="right-app">
+                    <div class="right-card">
+                        <div class="right-card-r">
+                            <p style="margin-bottom: 0;">Tip Amount</p>
+                            <span>/ person</span>
+                        </div>
+                        <div  class="right-card-l">
+                            <p id="per-amt" class="per-amt">$ 0.00</p>
+                        </div>
+                    </div>
+                    <div class="right-card">
+                        <div class="right-card-r">
+                            <p style="margin-bottom: 0;">Total</p>
+                            <span>/ person</span>
+                        </div>
+                        <div  class="right-card-l">
+                            <p id="total" class="per-amt">$ 0.00</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="reset" onclick="handleReset()">RESET</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./App.js"></script>
+</body>
+
+</html>
